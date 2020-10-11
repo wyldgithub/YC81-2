@@ -30,6 +30,8 @@ public class BookController {
         //return restTemplate.getForObject(URL+id,Book.class);
         //   HttpEntity(    MultiValueMap)   ,    HttpHeaders: MultiValueMap
         //   返回: ResponseEntity
+
+
         return restTemplate.exchange( url+id, HttpMethod.GET, new HttpEntity<Object>(  httpHeaders   ), Book.class ).getBody();
     }
 
